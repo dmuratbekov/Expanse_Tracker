@@ -1,0 +1,67 @@
+.analyticsContainer {
+  padding: var(--spacing4);
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing4);
+  margin-bottom: var(--spacing4);
+}
+
+.chartCard {
+  background-color: var(--colorWhite);
+  border-radius: var(--radiusLg);
+  border: 1px solid var(--colorNeutral200);
+  box-shadow: var(--shadowSm);
+}
+
+.chartHeader {
+  padding: var(--spacing4);
+  border-bottom: 1px solid var(--colorNeutral200);
+}
+
+.chartTitle {
+  font-weight: var(--fontWeightSemibold);
+  color: var(--colorNeutral900);
+}
+
+.chartSubtitle {
+  font-size: var(--fontSizeXs);
+  color: var(--colorNeutral500);
+  margin-top: var(--spacing1);
+}
+
+.chartContent {
+  padding: var(--spacing4);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .analyticsContainer {
+    padding: var(--spacing8);
+  }
+
+  .chartsGrid {
+    gap: var(--spacing6);
+    margin-bottom: var(--spacing6);
+  }
+
+  .chartHeader {
+    padding: var(--spacing6);
+  }
+
+  .chartSubtitle {
+    font-size: var(--fontSizeSm);
+  }
+
+  .chartContent {
+    padding: var(--spacing6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .chartsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

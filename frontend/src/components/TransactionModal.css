@@ -1,0 +1,108 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: var(--spacing4);
+}
+
+.modalContent {
+  background-color: var(--colorWhite);
+  border-radius: var(--radiusLg);
+  max-width: 28rem;
+  width: 100%;
+  box-shadow: var(--shadowLg);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing4);
+  border-bottom: 1px solid var(--colorNeutral200);
+  position: sticky;
+  top: 0;
+  background-color: var(--colorWhite);
+}
+
+.modalTitle {
+  font-weight: var(--fontWeightSemibold);
+  color: var(--colorNeutral900);
+  font-size: var(--fontSizeSm);
+}
+
+.modalForm {
+  padding: var(--spacing4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing4);
+}
+
+.typeSelector {
+  display: flex;
+  gap: var(--spacing2);
+}
+
+.typeButton {
+  flex: 1;
+  padding: var(--spacing3) var(--spacing4);
+  border-radius: var(--radiusMd);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transitionFast);
+}
+
+.modalActions {
+  display: flex;
+  gap: var(--spacing3);
+  padding-top: var(--spacing4);
+}
+
+.modalCancelButton {
+  flex: 1;
+  padding: var(--spacing3) var(--spacing4);
+  background-color: var(--colorNeutral100);
+  color: var(--colorNeutral900);
+  border-radius: var(--radiusMd);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transitionFast);
+}
+
+.modalCancelButton:hover {
+  background-color: rgba(245, 245, 245, 0.8);
+}
+
+.modalSubmitButton {
+  flex: 1;
+  padding: var(--spacing3) var(--spacing4);
+  background-color: var(--colorPrimary);
+  color: var(--colorWhite);
+  border-radius: var(--radiusMd);
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transitionFast);
+}
+
+.modalSubmitButton:hover {
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .modalHeader {
+    padding: var(--spacing6);
+  }
+
+  .modalTitle {
+    font-size: var(--fontSizeBase);
+  }
+
+  .modalForm {
+    padding: var(--spacing6);
+  }
+}

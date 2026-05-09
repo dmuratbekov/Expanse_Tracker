@@ -1,0 +1,336 @@
+.transactionsContainer {
+  padding: var(--spacing4);
+}
+
+.pageHeader {
+  margin-bottom: var(--spacing6);
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing4);
+  margin-bottom: var(--spacing6);
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing2);
+  background-color: var(--colorPrimary);
+  color: var(--colorWhite);
+  padding: 0.625rem var(--spacing4);
+  border-radius: var(--radiusMd);
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transitionFast);
+  font-size: var(--fontSizeSm);
+  width: 100%;
+  justify-content: center;
+}
+
+.addButton:hover {
+  opacity: 0.9;
+}
+
+.addIcon {
+  width: var(--spacing4);
+  height: var(--spacing4);
+}
+
+/* Filters */
+.filtersCard {
+  background-color: var(--colorWhite);
+  border-radius: var(--radiusLg);
+  border: 1px solid var(--colorNeutral200);
+  box-shadow: var(--shadowSm);
+  padding: var(--spacing4);
+  margin-bottom: var(--spacing4);
+}
+
+.filtersWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing3);
+}
+
+.searchWrapper {
+  flex: 1;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--spacing3);
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--spacing4);
+  height: var(--spacing4);
+  color: var(--colorNeutral500);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.625rem var(--spacing4) 0.625rem 2.25rem;
+  background-color: var(--colorNeutral50);
+  border-radius: var(--radiusMd);
+  border: 1px solid var(--colorNeutral200);
+  font-size: var(--fontSizeSm);
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: var(--colorPrimary);
+  box-shadow: 0 0 0 2px var(--colorPrimaryLight);
+}
+
+.filterButtons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing2);
+}
+
+.filterButton {
+  padding: 0.625rem var(--spacing3);
+  border-radius: var(--radiusMd);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transitionFast);
+  font-size: var(--fontSizeSm);
+}
+
+/* Table Wrapper */
+.tableWrapper {
+  background-color: var(--colorWhite);
+  border-radius: var(--radiusLg);
+  border: 1px solid var(--colorNeutral200);
+  box-shadow: var(--shadowSm);
+  overflow: hidden;
+  display: none;
+}
+
+.tableScroll {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHead {
+  background-color: rgba(245, 245, 245, 0.5);
+  border-bottom: 1px solid var(--colorNeutral200);
+}
+
+.tableHead th {
+  text-align: left;
+  padding: var(--spacing4) var(--spacing6);
+  font-weight: var(--fontWeightMedium);
+  color: var(--colorNeutral500);
+  font-size: var(--fontSizeSm);
+}
+
+.tableHeadRight {
+  text-align: right;
+}
+
+.tableBody tr {
+  border-bottom: 1px solid var(--colorNeutral200);
+  transition: background-color var(--transitionFast);
+}
+
+.tableBody tr:last-child {
+  border-bottom: none;
+}
+
+.tableBody tr:hover {
+  background-color: rgba(245, 245, 245, 0.5);
+}
+
+.tableBody td {
+  padding: var(--spacing4) var(--spacing6);
+}
+
+.tableCellRight {
+  text-align: right;
+}
+
+.tableDate {
+  color: var(--colorNeutral500);
+  font-size: var(--fontSizeSm);
+}
+
+.tableNameCell {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing3);
+}
+
+.tableCategory {
+  color: var(--colorNeutral900);
+}
+
+.tableDescription {
+  color: var(--colorNeutral500);
+  font-size: var(--fontSizeSm);
+}
+
+.actionsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing2);
+}
+
+/* Mobile Cards */
+.mobileCards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing3);
+}
+
+.mobileCard {
+  background-color: var(--colorWhite);
+  border-radius: var(--radiusLg);
+  border: 1px solid var(--colorNeutral200);
+  box-shadow: var(--shadowSm);
+  padding: var(--spacing4);
+}
+
+.mobileCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--spacing3);
+}
+
+.mobileCardMain {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing3);
+  flex: 1;
+  min-width: 0;
+}
+
+.mobileCardInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.mobileCardTitle {
+  font-weight: var(--fontWeightSemibold);
+  color: var(--colorNeutral900);
+  margin-bottom: var(--spacing1);
+}
+
+.mobileCardCategory {
+  font-size: var(--fontSizeSm);
+  color: var(--colorNeutral500);
+}
+
+.mobileCardAmount {
+  font-weight: var(--fontWeightSemibold);
+  font-size: var(--fontSizeBase);
+  flex-shrink: 0;
+  margin-left: var(--spacing2);
+}
+
+.mobileCardDescription {
+  font-size: var(--fontSizeSm);
+  color: var(--colorNeutral500);
+  margin-bottom: var(--spacing3);
+}
+
+.mobileCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--spacing3);
+  border-top: 1px solid var(--colorNeutral200);
+}
+
+.mobileCardDate {
+  font-size: var(--fontSizeXs);
+  color: var(--colorNeutral500);
+}
+
+.mobileCardActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing2);
+}
+
+.emptyStateMobile {
+  text-align: center;
+  padding: var(--spacing12);
+  color: var(--colorNeutral500);
+  background-color: var(--colorWhite);
+  border-radius: var(--radiusLg);
+  border: 1px solid var(--colorNeutral200);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .transactionsContainer {
+    padding: var(--spacing8);
+  }
+
+  .pageHeader {
+    margin-bottom: var(--spacing8);
+  }
+
+  .headerWrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .addButton {
+    padding: 0.625rem var(--spacing6);
+    font-size: var(--fontSizeBase);
+    width: auto;
+  }
+
+  .addIcon {
+    width: var(--spacing5);
+    height: var(--spacing5);
+  }
+
+  .filtersCard {
+    padding: var(--spacing6);
+    margin-bottom: var(--spacing6);
+  }
+
+  .filtersWrapper {
+    gap: var(--spacing4);
+  }
+
+  .searchIcon {
+    width: var(--spacing5);
+    height: var(--spacing5);
+  }
+
+  .searchInput {
+    padding: 0.625rem var(--spacing4) 0.625rem 2.5rem;
+    font-size: var(--fontSizeBase);
+  }
+
+  .filterButtons {
+    gap: var(--spacing2);
+  }
+
+  .filterButton {
+    padding: 0.625rem var(--spacing4);
+    font-size: var(--fontSizeBase);
+  }
+
+  .tableWrapper {
+    display: block;
+  }
+
+  .mobileCards {
+    display: none;
+  }
+}

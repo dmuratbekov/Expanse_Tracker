@@ -1,0 +1,143 @@
+.categoriesContainer {
+  padding: var(--spacing4);
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing3);
+}
+
+.categoryCard {
+  background-color: var(--colorWhite);
+  border-radius: var(--radiusLg);
+  border: 1px solid var(--colorNeutral200);
+  box-shadow: var(--shadowSm);
+  padding: var(--spacing4);
+  transition: box-shadow var(--transitionFast);
+}
+
+.categoryCard:hover {
+  box-shadow: var(--shadowMd);
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--spacing3);
+}
+
+.categoryIconWrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radiusMd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fontSizeLg);
+}
+
+.categoryActions {
+  display: flex;
+  gap: var(--spacing1);
+}
+
+.categoryName {
+  font-weight: var(--fontWeightSemibold);
+  color: var(--colorNeutral900);
+  margin-bottom: var(--spacing2);
+}
+
+.categoryCount {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing2);
+  font-size: var(--fontSizeXs);
+  color: var(--colorNeutral500);
+}
+
+.categoryCountIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.categoryFooter {
+  margin-top: var(--spacing3);
+  padding-top: var(--spacing3);
+  border-top: 1px solid var(--colorNeutral200);
+}
+
+.categoryBar {
+  width: 100%;
+  height: var(--spacing1);
+  border-radius: var(--radiusFull);
+}
+
+.sectionTitle {
+  font-weight: var(--fontWeightSemibold);
+  color: var(--colorNeutral900);
+  margin-bottom: var(--spacing3);
+}
+
+.sectionsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing6);
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+  .categoriesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categoryCountIcon {
+    width: var(--spacing4);
+    height: var(--spacing4);
+  }
+}
+
+@media (min-width: 768px) {
+  .categoriesContainer {
+    padding: var(--spacing8);
+  }
+
+  .categoryCard {
+    padding: var(--spacing6);
+  }
+
+  .categoryHeader {
+    margin-bottom: var(--spacing4);
+  }
+
+  .categoryIconWrapper {
+    width: 3rem;
+    height: 3rem;
+    font-size: var(--fontSizeXl);
+  }
+
+  .categoryCount {
+    font-size: var(--fontSizeSm);
+  }
+
+  .categoryFooter {
+    margin-top: var(--spacing4);
+    padding-top: var(--spacing4);
+  }
+
+  .sectionTitle {
+    margin-bottom: var(--spacing4);
+  }
+
+  .sectionsWrapper {
+    gap: var(--spacing8);
+  }
+}
+
+@media (min-width: 1024px) {
+  .categoriesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing4);
+  }
+}

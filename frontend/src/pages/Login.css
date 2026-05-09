@@ -1,0 +1,95 @@
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--colorNeutral50);
+  padding: 0 var(--spacing4);
+}
+
+.loginWrapper {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.loginHeader {
+  text-align: center;
+  margin-bottom: var(--spacing6);
+}
+
+.loginTitle {
+  font-size: var(--fontSizeXl);
+  font-weight: var(--fontWeightSemibold);
+  color: var(--colorNeutral900);
+  margin-bottom: var(--spacing2);
+}
+
+.loginSubtitle {
+  font-size: var(--fontSizeSm);
+  color: var(--colorNeutral500);
+}
+
+.loginCard {
+  background-color: var(--colorWhite);
+  border-radius: var(--radiusLg);
+  box-shadow: var(--shadowSm);
+  border: 1px solid var(--colorNeutral200);
+  padding: var(--spacing6);
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing6);
+}
+
+.loginFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fontSizeSm);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing2);
+  cursor: pointer;
+}
+
+.checkboxInput {
+  width: var(--spacing4);
+  height: var(--spacing4);
+  border-radius: var(--radiusSm);
+  border: 1px solid var(--colorNeutral200);
+  cursor: pointer;
+}
+
+.checkboxText {
+  color: var(--colorNeutral500);
+}
+
+.authFooter {
+  margin-top: var(--spacing6);
+  text-align: center;
+  font-size: var(--fontSizeSm);
+  color: var(--colorNeutral500);
+}
+
+@media (min-width: 768px) {
+  .loginHeader {
+    margin-bottom: var(--spacing8);
+  }
+
+  .loginTitle {
+    font-size: var(--fontSize2xl);
+  }
+
+  .loginSubtitle {
+    font-size: var(--fontSizeBase);
+  }
+
+  .loginCard {
+    padding: var(--spacing8);
+  }
+}

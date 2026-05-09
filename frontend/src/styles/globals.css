@@ -1,0 +1,60 @@
+@import './variables.css';
+@import './utilities.css';
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--colorNeutral900);
+  background-color: var(--colorNeutral50);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+
+button {
+  font-family: inherit;
+}
+
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+
+*:focus-visible {
+  outline: 2px solid var(--colorPrimary);
+  outline-offset: 2px;
+}

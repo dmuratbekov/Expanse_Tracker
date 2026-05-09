@@ -1,0 +1,70 @@
+:root {
+  /* Colors - Neutral */
+  --colorNeutral50: #fafafa;
+  --colorNeutral100: #f5f5f5;
+  --colorNeutral200: #e5e5e5;
+  --colorNeutral400: #a3a3a3;
+  --colorNeutral500: #737373;
+  --colorNeutral900: #000;
+  --colorWhite: #fff;
+
+  /* Colors - Primary */
+  --colorPrimary: #7d1ef2;
+  --colorPrimaryLight: rgba(125, 30, 242, 0.1);
+
+  /* Colors - Semantic */
+  --colorIncome: oklch(0.62 0.18 145);
+  --colorIncomeLight: #f0fdf4;
+  --colorExpense: oklch(0.58 0.22 25);
+  --colorExpenseLight: #fef2f2;
+  --colorBlue: #2563eb;
+  --colorBlueLight: #eff6ff;
+  --colorGreen: #16a34a;
+  --colorGreenLight: #f0fdf4;
+  --colorOrange: #ea580c;
+  --colorOrangeLight: #fff7ed;
+  --colorPurple: #9333ea;
+  --colorPurpleLight: #faf5ff;
+
+  /* Spacing */
+  --spacing1: 0.25rem;
+  --spacing2: 0.5rem;
+  --spacing3: 0.75rem;
+  --spacing4: 1rem;
+  --spacing5: 1.25rem;
+  --spacing6: 1.5rem;
+  --spacing8: 2rem;
+  --spacing12: 3rem;
+
+  /* Border Radius */
+  --radiusSm: 0.25rem;
+  --radiusMd: 0.5rem;
+  --radiusLg: 0.75rem;
+  --radiusFull: 9999px;
+
+  /* Shadows */
+  --shadowSm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadowMd: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadowLg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /* Font Sizes */
+  --fontSizeXs: 0.75rem;
+  --fontSizeSm: 0.875rem;
+  --fontSizeBase: 1rem;
+  --fontSizeLg: 1.25rem;
+  --fontSizeXl: 1.5rem;
+  --fontSize2xl: 1.875rem;
+
+  /* Font Weights */
+  --fontWeightMedium: 500;
+  --fontWeightSemibold: 600;
+
+  /* Transitions */
+  --transitionFast: 0.2s;
+  --transitionNormal: 0.3s;
+
+  /* Breakpoints (for reference) */
+  --breakpointSm: 640px;
+  --breakpointMd: 768px;
+  --breakpointLg: 1024px;
+}

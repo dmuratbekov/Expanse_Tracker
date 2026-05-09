@@ -1,0 +1,364 @@
+/* Layout Utilities */
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Card Components */
+.card {
+  background-color: var(--colorWhite);
+  border-radius: var(--radiusLg);
+  border: 1px solid var(--colorNeutral200);
+  box-shadow: var(--shadowSm);
+}
+
+.cardHeader {
+  padding: var(--spacing4);
+  border-bottom: 1px solid var(--colorNeutral200);
+}
+
+.cardContent {
+  padding: var(--spacing4);
+}
+
+.cardTitle {
+  font-weight: var(--fontWeightSemibold);
+  color: var(--colorNeutral900);
+}
+
+.cardSubtitle {
+  font-size: var(--fontSizeXs);
+  color: var(--colorNeutral500);
+  margin-top: var(--spacing1);
+}
+
+/* Button Components */
+.btn {
+  padding: var(--spacing3) var(--spacing4);
+  border-radius: var(--radiusMd);
+  border: none;
+  cursor: pointer;
+  font-size: var(--fontSizeBase);
+  transition: opacity var(--transitionFast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing2);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btnPrimary {
+  background-color: var(--colorPrimary);
+  color: var(--colorWhite);
+}
+
+.btnSecondary {
+  background-color: var(--colorNeutral100);
+  color: var(--colorNeutral900);
+}
+
+.btnIncome {
+  background-color: var(--colorIncome);
+  color: var(--colorWhite);
+}
+
+.btnExpense {
+  background-color: var(--colorExpense);
+  color: var(--colorWhite);
+}
+
+.btnInactive {
+  background-color: var(--colorNeutral50);
+  color: var(--colorNeutral500);
+}
+
+.btnInactive:hover {
+  background-color: var(--colorNeutral100);
+}
+
+.btnIcon {
+  padding: var(--spacing2);
+  background: transparent;
+  border: none;
+  border-radius: var(--radiusMd);
+  cursor: pointer;
+  transition: background-color var(--transitionFast);
+}
+
+.btnIcon:hover {
+  background-color: var(--colorNeutral100);
+}
+
+/* Form Components */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  display: block;
+  font-size: var(--fontSizeSm);
+  font-weight: var(--fontWeightMedium);
+  color: var(--colorNeutral900);
+  margin-bottom: var(--spacing2);
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: var(--spacing3);
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--spacing5);
+  height: var(--spacing5);
+  color: var(--colorNeutral500);
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  width: 100%;
+  padding: var(--spacing3) var(--spacing4);
+  background-color: var(--colorNeutral50);
+  border-radius: var(--radiusMd);
+  border: 1px solid var(--colorNeutral200);
+  font-size: var(--fontSizeBase);
+  outline: none;
+}
+
+.formInputWithIcon {
+  padding-left: 2.5rem;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  border-color: var(--colorPrimary);
+  box-shadow: 0 0 0 2px var(--colorPrimaryLight);
+}
+
+.formTextarea {
+  resize: none;
+}
+
+.formSelect {
+  cursor: pointer;
+}
+
+/* Icon Badge Components */
+.iconBadge {
+  padding: var(--spacing2);
+  border-radius: var(--radiusMd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconBadge>svg,
+.iconBadgeSm>svg {
+  width: var(--spacing4);
+  height: var(--spacing4);
+}
+
+.iconBadgeSm {
+  padding: 0.375rem;
+}
+
+.iconBadgeBlue {
+  background-color: var(--colorBlueLight);
+}
+
+.iconBadgeGreen {
+  background-color: var(--colorGreenLight);
+}
+
+.iconBadgeRed {
+  background-color: var(--colorExpenseLight);
+}
+
+.iconBadgeOrange {
+  background-color: var(--colorOrangeLight);
+}
+
+.iconBadgePurple {
+  background-color: var(--colorPurpleLight);
+}
+
+.iconBadgeIncome {
+  background-color: var(--colorIncomeLight);
+}
+
+.iconBadgeExpense {
+  background-color: var(--colorExpenseLight);
+}
+
+/* Icon Colors */
+.iconBlue {
+  color: var(--colorBlue);
+}
+
+.iconGreen {
+  color: var(--colorGreen);
+}
+
+.iconIncome {
+  color: var(--colorIncome);
+}
+
+.iconExpense {
+  color: var(--colorExpense);
+}
+
+.iconOrange {
+  color: var(--colorOrange);
+}
+
+.iconPurple {
+  color: var(--colorPurple);
+}
+
+.iconNeutral {
+  color: var(--colorNeutral500);
+}
+
+.iconDelete {
+  color: var(--colorExpense);
+}
+
+/* Text Utilities */
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.textMuted {
+  color: var(--colorNeutral500);
+}
+
+.textIncome {
+  color: var(--colorIncome);
+}
+
+.textExpense {
+  color: var(--colorExpense);
+}
+
+.textSemibold {
+  font-weight: var(--fontWeightSemibold);
+}
+
+/* Link Utilities */
+.link {
+  color: var(--colorPrimary);
+  text-decoration: none;
+  transition: text-decoration var(--transitionFast);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Grid Utilities */
+.grid1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing3);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing3);
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing2);
+}
+
+/* Responsive Grid */
+@media (min-width: 640px) {
+  .gridSm2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .gridMd2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gridMd3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    transition: box-shadow var(--transitionFast);
+  }
+
+  .cardHeader {
+    padding: var(--spacing6);
+  }
+
+  .cardContent {
+    padding: var(--spacing6);
+  }
+
+  .cardSubtitle {
+    font-size: var(--fontSizeSm);
+  }
+
+  .iconBadge>svg {
+    width: var(--spacing5);
+    height: var(--spacing5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridLg2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gridLg3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: var(--spacing12);
+  color: var(--colorNeutral500);
+}
+
+/* Divider */
+.divider {
+  border-bottom: 1px solid var(--colorNeutral200);
+}
