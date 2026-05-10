@@ -72,7 +72,10 @@ export function Transactions() {
                         <h1 className="pageTitle">Транзакции</h1>
                         <p className="pageSubtitle">Все ваши доходы и расходы</p>
                     </div>
-                    <button onClick={() => { setEditingTransaction(null); setIsModalOpen(true); }} className="addButton">
+                    <button
+                        onClick={() => { setEditingTransaction(null); setIsModalOpen(true); }}
+                        className="addButton"
+                    >
                         <Plus className="addIcon" /><span>Добавить</span>
                     </button>
                 </div>
@@ -81,15 +84,20 @@ export function Transactions() {
                     <div className="filtersWrapper">
                         <div className="searchWrapper">
                             <Search className="searchIcon" />
-                            <input type="text" placeholder="Поиск..." value={searchTerm}
+                            <input
+                                type="text"
+                                placeholder="Поиск..."
+                                value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                className="searchInput" />
+                                className="searchInput"
+                            />
                         </div>
                         <div className="filterButtons">
                             {["all", "income", "expense"].map((type) => (
                                 <button key={type} onClick={() => setFilterType(type)}
                                     className={`filterButton ${filterType === type
-                                        ? type === "all" ? "btnPrimary" : type === "income" ? "btnIncome" : "btnExpense"
+                                        ? type === "all" ? "btnPrimary"
+                                            : type === "income" ? "btnIncome" : "btnExpense"
                                         : "btnInactive"}`}>
                                     {type === "all" ? "Все" : type === "income" ? "Доходы" : "Расходы"}
                                 </button>
@@ -99,12 +107,15 @@ export function Transactions() {
                 </div>
             </div>
 
+            {/* Десктоп — таблица */}
             <div className="tableWrapper">
                 <div className="tableScroll">
                     <table className="table">
                         <thead className="tableHead">
                             <tr>
-                                <th>Дата</th><th>Название</th><th>Категория</th>
+                                <th>Дата</th>
+                                <th>Название</th>
+                                <th>Категория</th>
                                 <th>Описание</th>
                                 <th className="tableHeadRight">Сумма</th>
                                 <th className="tableHeadRight">Действия</th>
@@ -146,7 +157,49 @@ export function Transactions() {
                         </tbody>
                     </table>
                 </div>
-                {filtered.length === 0 && <div className="emptyState">Транзакции не найдены</div>}
+                {filtered.length === 0 && (
+                    <div className="emptyState">Транзакции не найдены</div>
+                )}
+            </div>
+
+            {/* Мобильный — карточки */}
+            <div className="mobileCards">
+                {filtered.map((tx) => (
+                    <div key={tx.id} className="mobileCard">
+                        <div className="mobileCardHeader">
+                            <div className="mobileCardMain">
+                                <div className={`iconBadgeSm ${tx.type === "income" ? "iconBadgeIncome" : "iconBadgeExpense"}`}>
+                                    {tx.type === "income"
+                                        ? <ArrowUpRight className="iconIncome" />
+                                        : <ArrowDownRight className="iconExpense" />}
+                                </div>
+                                <div className="mobileCardInfo">
+                                    <p className="mobileCardTitle">{tx.description || tx.category_name || "—"}</p>
+                                    <p className="mobileCardCategory">{tx.category_name || "Без категории"}</p>
+                                </div>
+                            </div>
+                            <p className={`mobileCardAmount ${tx.type === "income" ? "textIncome" : "textExpense"}`}>
+                                {tx.type === "income" ? "+" : "-"}{Number(tx.amount).toLocaleString("ru-RU")} KGS
+                            </p>
+                        </div>
+                        <div className="mobileCardFooter">
+                            <span className="mobileCardDate">
+                                {new Date(tx.transaction_date).toLocaleDateString("ru-RU")}
+                            </span>
+                            <div className="mobileCardActions">
+                                <button onClick={() => { setEditingTransaction(tx); setIsModalOpen(true); }} className="btnIcon">
+                                    <Edit2 className="iconNeutral" />
+                                </button>
+                                <button onClick={() => handleDelete(tx.id)} className="btnIcon">
+                                    <Trash2 className="iconDelete" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+                {filtered.length === 0 && (
+                    <div className="emptyStateMobile">Транзакции не найдены</div>
+                )}
             </div>
 
             {isModalOpen && (
