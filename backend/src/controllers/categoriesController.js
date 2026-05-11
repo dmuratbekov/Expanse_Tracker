@@ -57,16 +57,17 @@ const createCategory = async (req, res) => {
 const updateCategory = async (req, res) => {
     try {
         const { id } = req.params;
-        const { name, color, icon } = req.body;
+        const { name, color, icon, type } = req.body;
 
         const result = await pool.query(
             `UPDATE categories
        SET name  = COALESCE($1, name),
            color = COALESCE($2, color),
-           icon  = COALESCE($3, icon)
-       WHERE id = $4 AND user_id = $5
+           icon  = COALESCE($3, icon),
+           type  = COALESCE($4, type)
+       WHERE id = $5 AND user_id = $6
        RETURNING *`,
-            [name, color, icon, id, req.user.userId]
+            [name, color, icon, type, id, req.user.userId]
         );
 
         if (result.rows.length === 0) {

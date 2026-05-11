@@ -274,6 +274,10 @@
 
 /* Responsive Styles */
 @media (min-width: 768px) {
+  .mobileCards {
+    display: none;
+  }
+
   .transactionsContainer {
     padding: var(--spacing8);
   }
